@@ -1,0 +1,12 @@
+<div *ngIf="book; else nothing">
+  <h4>
+    {{book.title}}
+  </h4>
+  <p>
+    {{book.author}}
+  </p>
+</div>
+
+<ng-template #nothing>
+  <p>Nothing to show</p>
+</ng-template>
