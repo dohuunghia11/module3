@@ -19,7 +19,8 @@ export class BookComponent implements OnInit {
   ngOnInit() {
     this.bookForm = this.fb.group({
       title: ['', [Validators.required, Validators.minLength(5)]],
-      description: ['', [Validators.required, Validators.minLength(5)]],
+      author: ['', [Validators.required, Validators.minLength(5)]],
+      description: ['', [Validators.required, Validators.minLength(5)]]
     });
     this.bookService
       .getBooks()
@@ -34,6 +35,7 @@ export class BookComponent implements OnInit {
           this.bookList.unshift(next);
           this.bookForm.reset({
             title: '',
+            author: '',
             description: ''
           });
         }, error => console.log(error));

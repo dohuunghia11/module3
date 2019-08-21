@@ -22,8 +22,9 @@ export class EditBookComponent implements OnInit {
 
   ngOnInit() {
     this.bookForm = this.fb.group({
-      title: ['', [Validators.required, Validators.minLength(10)]],
-      author: ['', [Validators.required, Validators.minLength(10)]]
+      title: ['', [Validators.required, Validators.minLength(5)]],
+      author: ['', [Validators.required, Validators.minLength(5)]],
+      description: ['', [Validators.required, Validators.minLength(5)]]
     });
     const id = +this.route.snapshot.paramMap.get('id');
     this.bookService.getBookById(id).subscribe(

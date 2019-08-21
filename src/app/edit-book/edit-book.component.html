@@ -13,7 +13,7 @@
     <label>
       Author
       <br>
-      <input type="text" formControlName="title">
+      <input type="text" formControlName="author">
     </label>
   </div>
   <div *ngIf="bookForm.get('author').invalid && bookForm.get('author').touched" style="color: red">
@@ -23,7 +23,7 @@
     <label>
       Description
       <br>
-      <textarea formControlName="body" cols="30" rows="10"></textarea>
+      <textarea formControlName="description" cols="30" rows="10"></textarea>
     </label>
   </div>
   <div *ngIf="bookForm.get('description').invalid && bookForm.get('description').touched" style="color: red">
